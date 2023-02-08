@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group</title>
+</head>
+<body>
+    <style>
+
+body {
+    background-repeat: no-repeat;
+    background-color: yellowgreen;
+}
+
+.spotify{
+    width: 100px; 
+}
+
+h1 {
+    font-size: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+h2{
+    color: black;
+    font-size: 12px;
+}
+
+h3{
+    color: black;
+    margin-left: auto;
+    width: 11em;
+    font-size: 20px;
+}
+
+.imgl{
+border-radius: 70px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    flex-wrap: wrap;
+    display: flex;
+    width: 1440px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+@media screen and (max-width:1500px) {
+    body {
+    background-repeat: no-repeat;
+    background-color: yellowgreen;
+}
+
+.spotify{
+    width: 80px; 
+}
+
+h1 {
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+h2{
+    color: black;
+    font-size: 12px;
+}
+
+h3{
+    color: black;
+    margin-left: auto;
+    width: 11em;
+    font-size: 20px;
+}
+
+.imgl{
+border-radius: 120px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    flex-wrap: wrap;
+    display: flex;
+    width: 760px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+ @media screen and (max-width:740px) {
+        body {
+    background-repeat: no-repeat;
+    background-color: yellowgreen;
+}
+
+.spotify{
+    width: 100px; 
+}
+
+h1 {
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+h2{
+    color: black;
+    font-size: 20px;
+}
+
+h3{
+    color: black;
+    margin-left: auto;
+    width: 11em;
+    font-size: 20px;
+}
+
+.imgl{
+border-radius: 120px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    flex-wrap: wrap;
+    display: flex;
+    width: 240px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+    }
+    </style>
+    
+    <h1><a href="https://open.spotify.com/"><img class="spotify" src="https://cdn-icons-png.flaticon.com/512/154/154874.png" alt="значок спотифайа"></a><a href="/">  Groopie-Tracker</a></h1>
+        <h3><a href="https://github.com/01-edu/public/tree/master/subjects/groupie-tracker/visualizations">There you can read more, about groupie-tracker</a></h3>
+    <div class="container-fluid">
+        
+        <div class="box">
+            {{range  .}}
+            <div class="container">
+                <div class="namewithimg">
+                    <a class="cards-link" href="/artist/?id={{.Id}}">
+                        <div >
+                            <img class="imgl" src="{{.Image}}" alt="image">
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <h2>{{.Name}}</h2>
+                            </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            {{end}}
+        </div>    
+    </div>
+</body>
+</html>
